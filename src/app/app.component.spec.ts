@@ -26,4 +26,10 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('.content span')?.textContent).toContain('ng-storybook app is running!');
   });
+
+  it('should render title', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    expect(fixture).toMatchSnapshot(); // This is the snapshot validation
+  });
 });
