@@ -6,8 +6,9 @@ const config: StorybookConfig = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
-    "@storybook/addon-a11y",
-    "@storybook/addon-coverage",
+    "@storybook/addon-storyshots", // https://github.com/storybookjs/storybook/issues/11376#issuecomment-1386212633
+    // "@storybook/addon-a11y",
+    // "@storybook/addon-coverage",
   ],
   framework: {
     name: "@storybook/angular",

@@ -552,7 +552,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    primary: true,\n    label: 'Button',\n  },\n}"
+                "defaultValue": "{\n  args: {\n    primary: true,\n    label: 'Button',\n  },\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n\n    // 👇 Simulate interactions with the component\n    // await userEvent.type(canvas.getByTestId('email'), 'email@provider.com');\n\n    // await userEvent.type(canvas.getByTestId('password'), 'a-random-password');\n\n    // See https://storybook.js.org/docs/react/essentials/actions#automatically-matching-args to learn how to setup logging in the Actions panel\n    await userEvent.click(canvas.getByRole('button'));\n\n    // 👇 Assert DOM structure\n    await expect(\n      canvas.getByRole(\n        'button'\n      )\n    ).toBeInTheDocument();\n\n    // await expect(canvas.getByRole('button')).toMatchImageSnapshot();\n  }\n}"
             },
             {
                 "name": "Secondary",
@@ -642,7 +642,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    primary: true,\n    label: 'Button',\n  },\n}"
+                    "defaultValue": "{\n  args: {\n    primary: true,\n    label: 'Button',\n  },\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n\n    // 👇 Simulate interactions with the component\n    // await userEvent.type(canvas.getByTestId('email'), 'email@provider.com');\n\n    // await userEvent.type(canvas.getByTestId('password'), 'a-random-password');\n\n    // See https://storybook.js.org/docs/react/essentials/actions#automatically-matching-args to learn how to setup logging in the Actions panel\n    await userEvent.click(canvas.getByRole('button'));\n\n    // 👇 Assert DOM structure\n    await expect(\n      canvas.getByRole(\n        'button'\n      )\n    ).toBeInTheDocument();\n\n    // await expect(canvas.getByRole('button')).toMatchImageSnapshot();\n  }\n}"
                 },
                 {
                     "name": "Secondary",
